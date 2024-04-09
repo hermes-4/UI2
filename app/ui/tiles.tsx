@@ -121,28 +121,28 @@ const Minor = (
 );
 const Main = [
     { title: "No. of Trips", number: 1, icon: Trip },
-    { title: "No. of Passengers", number: 1, icon: Passenger },
-    { title: "No. of Minors", number: 1, icon: Minor },
-    { title: "No. of Capacity", number: 1, icon: Capacity },
-    { title: "No. of Migrations", number: 1, icon: Folder },
-    { title: "No. of Incidents", number: 1, icon: Incident },
+    { title: "No. of Passengers", number: 0, icon: Passenger },
+    { title: "No. of Minors", number: 0, icon: Minor },
+    { title: "No. of Capacity", number: 50, icon: Capacity },
+    { title: "No. of Migrations", number: 0, icon: Folder },
+    { title: "No. of Incidents", number: 0, icon: Incident },
 ];
 
 const Other = [
     {
         title: "No. of Companies",
-        number: 1,
+        number: 26,
         icon: Building,
     },
-    { title: "No. of Branches", number: 1, icon: Branch },
+    { title: "No. of Branches", number: 68, icon: Branch },
     {
         title: "No. of Loading Points",
-        number: 1,
+        number: 74,
         icon: MapPin,
     },
-    { title: "No. of Towns", number: 1, icon: Town },
-    { title: "No. of Routes", number: 1, icon: Route },
-    { title: "No. of Midroutes", number: 1, icon: Route },
+    { title: "No. of Towns", number: 44, icon: Town },
+    { title: "No. of Routes", number: 247, icon: Route },
+    { title: "No. of Midroutes", number: 46, icon: Route },
 ];
 function InfoItem({ title, number, icon }: Info) {
     return (
@@ -161,14 +161,16 @@ function InfoItem({ title, number, icon }: Info) {
 export default function Tile() {
     return (
         <>
-            <div className="w-10/12 float-right my-1">
+            <div className="w-10/12 float-right my-2">
                 <p>Main</p>
             </div>
             <div className="grid grid-cols-3 gap-4 grid-flow-row justify-between w-10/12 float-right mr-4">
                 {Main.map((item, index) => (
-                    <div className="col-span-1 bg-white right-16 rounded-lg h-16 p-2 mb-2">
+                    <div
+                        key={index}
+                        className="col-span-1 bg-white right-16 rounded-lg shadow-md h-16 p-2 "
+                    >
                         <InfoItem
-                            key={index}
                             title={item.title}
                             number={item.number}
                             icon={item.icon}
@@ -177,14 +179,14 @@ export default function Tile() {
                 ))}
             </div>
 
-            <div className="w-10/12 float-right my-1">
+            <div className="w-10/12 float-right my-2 ">
                 <p>Other</p>
             </div>
             <div className="grid grid-cols-3 gap-4 grid-flow-row justify-between w-10/12 float-right mr-4">
                 {Other.map((item, index) => (
                     <div
                         key={index}
-                        className="col-span-1 bg-white right-16 rounded-lg h-16 p-2  mb-2"
+                        className="col-span-1 bg-white right-16 rounded-lg shadow-md h-16 p-2 "
                     >
                         <InfoItem
                             title={item.title}
