@@ -160,17 +160,15 @@ function InfoItem({ title, number, icon }: Info) {
 
 export default function Tile() {
     return (
-        <div className="">
+        <>
             <div className="w-10/12 float-right my-1">
                 <p>Main</p>
             </div>
             <div className="grid grid-cols-3 gap-4 grid-flow-row justify-between w-10/12 float-right mr-4">
                 {Main.map((item, index) => (
-                    <div
-                        key={index}
-                        className="col-span-1 bg-white right-16 rounded-lg h-16 p-2 mb-2"
-                    >
+                    <div className="col-span-1 bg-white right-16 rounded-lg h-16 p-2 mb-2">
                         <InfoItem
+                            key={index}
                             title={item.title}
                             number={item.number}
                             icon={item.icon}
@@ -196,6 +194,6 @@ export default function Tile() {
                     </div>
                 ))}
             </div>
-        </div>
+        </>
     );
 }
