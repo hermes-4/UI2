@@ -13,7 +13,7 @@ import {
     TicketIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo.ico";
 
 const Home = <HomeIcon className="h-5 w-5 text-black" />;
 
