@@ -2,7 +2,6 @@ import React from "react";
 import {
     FolderIcon,
     BuildingOffice2Icon,
-    MapPinIcon,
     UsersIcon,
     UserGroupIcon,
     BuildingLibraryIcon,
@@ -17,7 +16,29 @@ interface Info {
 }
 
 const Folder = <FolderIcon className="h-5 w-5 text-red-900" />;
-const MapPin = <MapPinIcon className="h-5 w-5 text-red-900" />;
+const MapPin = (
+    <svg
+        data-slot="icon"
+        fill="none"
+        stroke-width="1.5"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        className="w-5 h-5 text-red-900"
+    >
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+        ></path>
+        <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+        ></path>
+    </svg>
+);
 
 const Building = <BuildingOffice2Icon className="w-5 h-5 text-red-900" />;
 const Passenger = <UsersIcon className="w-5 h-5 text-red-900" />;
@@ -148,8 +169,12 @@ function InfoItem({ title, number, icon }: Info) {
     return (
         <div className="grid grid-cols-4 gap-4">
             <div className="col-span-3">
-                <h2 className="text-lg font-light">{title}</h2>
-                <p className="text-gray-bold">{number}</p>
+                <h2 className="text-sm font-regular" style={{ fontSize: 12 }}>
+                    {title}
+                </h2>
+                <p className="text-sm font-bold" style={{ fontSize: 12 }}>
+                    {number}
+                </p>
             </div>
             <div className="col-span-1 flex justify-end items-center">
                 {icon}
@@ -161,10 +186,16 @@ function InfoItem({ title, number, icon }: Info) {
 export default function Tile() {
     return (
         <>
-            <div className="w-10/12 float-right my-2">
+            <div
+                className="float-right my-2"
+                style={{ fontSize: 18, width: "85.5%" }}
+            >
                 <p>Main</p>
             </div>
-            <div className="grid grid-cols-3 gap-4 grid-flow-row justify-between w-10/12 float-right mr-4">
+            <div
+                className="grid grid-cols-3 gap-4 grid-flow-row justify-between w-10/12 float-right mr-4"
+                style={{ width: "85.5%" }}
+            >
                 {Main.map((item, index) => (
                     <div
                         key={index}
@@ -179,10 +210,16 @@ export default function Tile() {
                 ))}
             </div>
 
-            <div className="w-10/12 float-right my-2 ">
+            <div
+                className="w-10/12 float-right my-2 "
+                style={{ fontSize: 18, width: "85.5%" }}
+            >
                 <p>Other</p>
             </div>
-            <div className="grid grid-cols-3 gap-4 grid-flow-row justify-between w-10/12 float-right mr-4">
+            <div
+                className="grid grid-cols-3 gap-4 grid-flow-row justify-between w-10/12 float-right mr-4"
+                style={{ width: "85.5%" }}
+            >
                 {Other.map((item, index) => (
                     <div
                         key={index}
