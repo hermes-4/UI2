@@ -5,58 +5,64 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import {
     HomeIcon,
-    UsersIcon,
-    ClockIcon,
     ChevronDoubleLeftIcon,
     ChevronDownIcon,
     ChevronUpIcon,
-    TicketIcon,
+    BuildingOffice2Icon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import logo from "../../public/logo.ico";
+import BookOnlineOutlinedIcon from "@mui/icons-material/BookOnlineOutlined";
+import CarCrashOutlinedIcon from "@mui/icons-material/CarCrashOutlined";
+import NewspaperOutlinedIcon from "@mui/icons-material/NewspaperOutlined";
+import AirportShuttleOutlinedIcon from "@mui/icons-material/AirportShuttleOutlined";
+import AccountTreeOutlinedIcon from "@mui/icons-material/AccountTreeOutlined";
+import LocationSearchingOutlinedIcon from "@mui/icons-material/LocationSearchingOutlined";
+import PriceChangeOutlinedIcon from "@mui/icons-material/PriceChangeOutlined";
+import RoomOutlinedIcon from "@mui/icons-material/RoomOutlined";
+import MapIcon from "@mui/icons-material/Map";
+import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
+import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 
-const Home = <HomeIcon className="h-5 w-5 text-black" />;
-
-const User = <UsersIcon className="h-6 w-6 text-black" />;
-
-const Schedule = <ClockIcon className="h-5 w-5 text-black" />;
-const Ticket = <TicketIcon className="h-6 w-6 text-gray-500" />;
-const Incident = <></>;
-const Booking = <></>;
-const Company = <></>;
-const Bus = <></>;
-const Branch = <></>;
-const Points = <></>;
-const Point = <></>;
-const Pickup = <></>;
-const Midroute = <></>;
-const Staff = <></>;
-const Region = <></>;
+const Home = <HomeIcon className=" text-black" style={{ fontSize: 50 }} />;
+const Schedule = <AccessTimeOutlinedIcon style={{ fontSize: 14 }} />;
+const Ticket = <NewspaperOutlinedIcon style={{ fontSize: 14 }} />;
+const Incident = <CarCrashOutlinedIcon style={{ fontSize: 14 }} />;
+const Booking = <BookOnlineOutlinedIcon style={{ fontSize: 14 }} />;
+const Company = <BuildingOffice2Icon style={{ fontSize: 14 }} />;
+const Bus = <AirportShuttleOutlinedIcon style={{ fontSize: 14 }} />;
+const Branch = <AccountTreeOutlinedIcon style={{ fontSize: 14 }} />;
+const Points = <LocationSearchingOutlinedIcon style={{ fontSize: 14 }} />;
+const Point = <PriceChangeOutlinedIcon style={{ fontSize: 14 }} />;
+const Pickup = <RoomOutlinedIcon style={{ fontSize: 14 }} />;
+const Midroute = <RoomOutlinedIcon style={{ fontSize: 14 }} />;
+const Staff = <PeopleAltOutlinedIcon style={{ fontSize: 14 }} />;
+const Region = <MapIcon style={{ fontSize: 14 }} />;
 
 const links = [
     { name: "Home", href: "/", icon: Home },
-    { name: "Accounts", href: "/accounts", icon: User },
+    { name: "Accounts", href: "", icon: Staff },
     { name: "Tickets", href: "", icon: Ticket },
-    { name: "Schedules", href: "/schedules", icon: Schedule },
+    { name: "Schedules", href: "", icon: Schedule },
     { name: "Incidents", href: "", icon: Incident },
-    { name: "Booking", href: "", icon: Booking },
+    { name: "Advanced Booking", href: "", icon: Booking },
 ];
 
 const comp = [
-    { name: "Company", href: "", icon: Company },
+    { name: "Bus Companies", href: "", icon: Company },
     { name: "Bus", href: "", icon: Bus },
 ];
 
 const branch = [
-    { name: "Branch", href: "", icon: Branch },
-    { name: "Points", href: "", icon: Points },
-    { name: "Point", href: "", icon: Point },
-    { name: "Pickup", href: "", icon: Pickup },
-    { name: "Midroute", href: "", icon: Midroute },
+    { name: "All Branches", href: "", icon: Branch },
+    { name: "Loading Points", href: "", icon: Points },
+    { name: "Loading Point Here", href: "", icon: Point },
+    { name: "Pickup Points", href: "", icon: Pickup },
+    { name: "Midroutes", href: "", icon: Midroute },
     { name: "Staff", href: "", icon: Staff },
 ];
 
-const other = [{ name: "Region", href: "", icon: Region }];
+const other = [{ name: "Regions", href: "", icon: Region }];
 
 function General() {
     const path = usePathname();
@@ -65,19 +71,17 @@ function General() {
             {links.map((link, index) => (
                 <div
                     key={index}
-                    className={clsx("flex justify-center items-center", {
+                    className={clsx("flex justify-center items-center ", {
                         " bg-gradient-to-r from-red-900 from-5% via-red-100 to-red-100 to-5%":
                             path === link.href,
                     })}
                 >
                     <Link href={link.href}>
-                        <div className="grid grid-cols-4 gap-4 my-1 justify-center">
-                            <p className="col-span-1 w-3 h-3 mb-2">
-                                {link.icon}
-                            </p>
+                        <div className="grid grid-cols-4 gap-4 my-2 ">
+                            <p className=" col-span-1 w-3 h-3  ">{link.icon}</p>
                             <p
                                 className="col-span-3"
-                                style={{ fontSize: 10, fontWeight: 400 }}
+                                style={{ fontSize: 10, fontWeight: 500 }}
                             >
                                 {link.name}
                             </p>
@@ -101,13 +105,11 @@ function Companies() {
                     })}
                 >
                     <Link href={link.href}>
-                        <div className="grid grid-cols-4 gap-4 my-1 justify-center">
-                            <p className="col-span-1 w-3 h-3 mb-2">
-                                {link.icon}
-                            </p>
+                        <div className="grid grid-cols-4 gap-4 my-2 ">
+                            <p className=" col-span-1 w-3 h-3  ">{link.icon}</p>
                             <p
                                 className="col-span-3"
-                                style={{ fontSize: 10, fontWeight: 400 }}
+                                style={{ fontSize: 10, fontWeight: 500 }}
                             >
                                 {link.name}
                             </p>
@@ -132,13 +134,11 @@ function Branches() {
                     })}
                 >
                     <Link href={link.href}>
-                        <div className="grid grid-cols-4 gap-4 my-1 justify-center">
-                            <p className="col-span-1 w-3 h-3 mb-2">
-                                {link.icon}
-                            </p>
+                        <div className="grid grid-cols-4 gap-4 my-2 ">
+                            <p className=" col-span-1 w-3 h-3  ">{link.icon}</p>
                             <p
                                 className="col-span-3"
-                                style={{ fontSize: 10, fontWeight: 400 }}
+                                style={{ fontSize: 10, fontWeight: 500 }}
                             >
                                 {link.name}
                             </p>
@@ -163,13 +163,11 @@ function Other() {
                     })}
                 >
                     <Link href={link.href}>
-                        <div className="grid grid-cols-4 gap-4 my-1 justify-center">
-                            <p className="col-span-1 w-3 h-3 mb-2">
-                                {link.icon}
-                            </p>
+                        <div className="grid grid-cols-4 gap-4 my-2 ">
+                            <p className=" col-span-1 w-3 h-3  ">{link.icon}</p>
                             <p
                                 className="col-span-3"
-                                style={{ fontSize: 10, fontWeight: 400 }}
+                                style={{ fontSize: 10, fontWeight: 600 }}
                             >
                                 {link.name}
                             </p>
@@ -223,7 +221,7 @@ export default function Sidenav() {
 
                 {isGeneralOpen ? (
                     <>
-                        <div className="grid grid-cols-4 justify-center items-center m-4">
+                        <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                             <p
                                 className="col-span-3"
                                 style={{ fontSize: 14, fontWeight: 400 }}
@@ -238,7 +236,7 @@ export default function Sidenav() {
                         <General />
                     </>
                 ) : (
-                    <div className="grid grid-cols-4 justify-center items-center m-4">
+                    <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                         <p
                             className="col-span-3 font-light"
                             style={{ fontSize: 14, fontWeight: 400 }}
@@ -254,7 +252,7 @@ export default function Sidenav() {
 
                 {isCompaniesOpen ? (
                     <>
-                        <div className="grid grid-cols-4 justify-center items-center m-4">
+                        <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                             <p
                                 className="col-span-3"
                                 style={{ fontSize: 14, fontWeight: 400 }}
@@ -269,7 +267,7 @@ export default function Sidenav() {
                         <Companies />
                     </>
                 ) : (
-                    <div className="grid grid-cols-4 justify-center items-center m-4">
+                    <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                         <p
                             className="col-span-3 font-light"
                             style={{ fontSize: 14, fontWeight: 400 }}
@@ -285,7 +283,7 @@ export default function Sidenav() {
 
                 {isBranchesOpen ? (
                     <>
-                        <div className="grid grid-cols-4 justify-center items-center m-4">
+                        <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                             <p
                                 className="col-span-3"
                                 style={{ fontSize: 14, fontWeight: 400 }}
@@ -300,7 +298,7 @@ export default function Sidenav() {
                         <Branches />
                     </>
                 ) : (
-                    <div className="grid grid-cols-4 justify-center items-center m-4">
+                    <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                         <p
                             className="col-span-3 font-light"
                             style={{ fontSize: 14, fontWeight: 400 }}
@@ -316,7 +314,7 @@ export default function Sidenav() {
 
                 {isOtherOpen ? (
                     <>
-                        <div className="grid grid-cols-4 justify-center items-center m-4">
+                        <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                             <p
                                 className="col-span-3"
                                 style={{ fontSize: 14, fontWeight: 400 }}
@@ -324,14 +322,14 @@ export default function Sidenav() {
                                 Other
                             </p>
                             <ChevronUpIcon
-                                className="h-6 w-6 text-gray-900 col-span-1"
+                                className="h-3 w-3 text-gray-900 col-span-1"
                                 onClick={toggleOther}
                             />
                         </div>
                         <Other />
                     </>
                 ) : (
-                    <div className="grid grid-cols-4 justify-center items-center m-4">
+                    <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                         <p
                             className="col-span-3 font-light"
                             style={{ fontSize: 14, fontWeight: 400 }}
@@ -339,7 +337,7 @@ export default function Sidenav() {
                             Other
                         </p>
                         <ChevronDownIcon
-                            className="h-6 w-6 text-gray-900 col-span-1"
+                            className="h-3 w-3 text-gray-900 col-span-1"
                             onClick={toggleOther}
                         />
                     </div>
