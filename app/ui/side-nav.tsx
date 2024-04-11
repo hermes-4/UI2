@@ -7,7 +7,6 @@ import {
     HomeIcon,
     ChevronDoubleLeftIcon,
     ChevronDownIcon,
-    ChevronUpIcon,
     BuildingOffice2Icon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
@@ -24,7 +23,9 @@ import MapIcon from "@mui/icons-material/Map";
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 
-const Home = <HomeIcon className=" text-black" style={{ fontSize: 50 }} />;
+const Home = (
+    <HomeIcon className="h-4 w-4 text-black" style={{ fontSize: 14 }} />
+);
 const Schedule = <AccessTimeOutlinedIcon style={{ fontSize: 14 }} />;
 const Ticket = <NewspaperOutlinedIcon style={{ fontSize: 14 }} />;
 const Incident = <CarCrashOutlinedIcon style={{ fontSize: 14 }} />;
@@ -77,10 +78,12 @@ function General() {
                     })}
                 >
                     <Link href={link.href}>
-                        <div className="grid grid-cols-4 gap-4 my-2 ">
-                            <p className=" col-span-1 w-3 h-3  ">{link.icon}</p>
+                        <div className="grid grid-cols-4 gap-4 my-2 items-center ">
+                            <p className=" col-span-1  mb-1 mt-0">
+                                {link.icon}
+                            </p>
                             <p
-                                className="col-span-3"
+                                className="col-span-3  truncate"
                                 style={{ fontSize: 10, fontWeight: 500 }}
                             >
                                 {link.name}
@@ -105,8 +108,10 @@ function Companies() {
                     })}
                 >
                     <Link href={link.href}>
-                        <div className="grid grid-cols-4 gap-4 my-2 ">
-                            <p className=" col-span-1 w-3 h-3  ">{link.icon}</p>
+                        <div className="grid grid-cols-4 gap-4 my-2 items-center ">
+                            <p className=" col-span-1  mb-1 mt-0">
+                                {link.icon}
+                            </p>
                             <p
                                 className="col-span-3"
                                 style={{ fontSize: 10, fontWeight: 500 }}
@@ -134,8 +139,10 @@ function Branches() {
                     })}
                 >
                     <Link href={link.href}>
-                        <div className="grid grid-cols-4 gap-4 my-2 ">
-                            <p className=" col-span-1 w-3 h-3  ">{link.icon}</p>
+                        <div className="grid grid-cols-4 gap-4 my-2 items-center ">
+                            <p className=" col-span-1  mb-1 mt-0">
+                                {link.icon}
+                            </p>
                             <p
                                 className="col-span-3"
                                 style={{ fontSize: 10, fontWeight: 500 }}
@@ -163,8 +170,10 @@ function Other() {
                     })}
                 >
                     <Link href={link.href}>
-                        <div className="grid grid-cols-4 gap-4 my-2 ">
-                            <p className=" col-span-1 w-3 h-3  ">{link.icon}</p>
+                        <div className="grid grid-cols-4 gap-4 my-2 items-center ">
+                            <p className=" col-span-1  mb-1 mt-0">
+                                {link.icon}
+                            </p>
                             <p
                                 className="col-span-3"
                                 style={{ fontSize: 10, fontWeight: 600 }}
@@ -208,140 +217,146 @@ export default function Sidenav() {
     return (
         <>
             <div className="fixed  top-0 bottom-0 w-40 bg-white overflow-x-auto">
-                <div className="text-lg font-small my-2 grid grid-cols-5 justify-center items-center">
-                    <Image src={logo} alt="OYA logo" className="w-7 h-7 mx-1" />
-                    <p
-                        className="col-span-3 font-bold ml-2"
-                        style={{ fontSize: 14, fontWeight: 700 }}
-                    >
-                        Operations
-                    </p>
-                    <ChevronDoubleLeftIcon className="h-5 w-5 text-gray-900 " />
-                </div>
+                <div>
+                    <div className="text-lg font-small my-2 grid grid-cols-5 justify-center items-center">
+                        <Image
+                            src={logo}
+                            alt="OYA logo"
+                            className="w-7 h-7 mx-1"
+                        />
+                        <p
+                            className="col-span-3 font-bold ml-2"
+                            style={{ fontSize: 14, fontWeight: 700 }}
+                        >
+                            Operations
+                        </p>
+                        <ChevronDoubleLeftIcon className="h-5 w-5 text-gray-900 " />
+                    </div>
 
-                {isGeneralOpen ? (
-                    <>
+                    {isGeneralOpen ? (
+                        <>
+                            <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
+                                <p
+                                    className="col-span-3"
+                                    style={{ fontSize: 14, fontWeight: 400 }}
+                                >
+                                    General
+                                </p>
+                                <ChevronDownIcon
+                                    className="h-6 w-6 text-gray-900 col-span-1"
+                                    onClick={toggleGeneral}
+                                />
+                            </div>
+                            <General />
+                        </>
+                    ) : (
                         <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                             <p
-                                className="col-span-3"
+                                className="col-span-3 font-light"
                                 style={{ fontSize: 14, fontWeight: 400 }}
                             >
                                 General
                             </p>
-                            <ChevronUpIcon
+                            <ChevronDownIcon
                                 className="h-6 w-6 text-gray-900 col-span-1"
                                 onClick={toggleGeneral}
                             />
                         </div>
-                        <General />
-                    </>
-                ) : (
-                    <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
-                        <p
-                            className="col-span-3 font-light"
-                            style={{ fontSize: 14, fontWeight: 400 }}
-                        >
-                            General
-                        </p>
-                        <ChevronDownIcon
-                            className="h-6 w-6 text-gray-900 col-span-1"
-                            onClick={toggleGeneral}
-                        />
-                    </div>
-                )}
+                    )}
 
-                {isCompaniesOpen ? (
-                    <>
+                    {isCompaniesOpen ? (
+                        <>
+                            <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
+                                <p
+                                    className="col-span-3"
+                                    style={{ fontSize: 14, fontWeight: 400 }}
+                                >
+                                    Companies
+                                </p>
+                                <ChevronDownIcon
+                                    className="h-6 w-6 text-gray-900 col-span-1"
+                                    onClick={toggleCompanies}
+                                />
+                            </div>
+                            <Companies />
+                        </>
+                    ) : (
                         <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                             <p
-                                className="col-span-3"
+                                className="col-span-3 font-light"
                                 style={{ fontSize: 14, fontWeight: 400 }}
                             >
                                 Companies
                             </p>
-                            <ChevronUpIcon
+                            <ChevronDownIcon
                                 className="h-6 w-6 text-gray-900 col-span-1"
                                 onClick={toggleCompanies}
                             />
                         </div>
-                        <Companies />
-                    </>
-                ) : (
-                    <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
-                        <p
-                            className="col-span-3 font-light"
-                            style={{ fontSize: 14, fontWeight: 400 }}
-                        >
-                            Companies
-                        </p>
-                        <ChevronDownIcon
-                            className="h-6 w-6 text-gray-900 col-span-1"
-                            onClick={toggleCompanies}
-                        />
-                    </div>
-                )}
+                    )}
 
-                {isBranchesOpen ? (
-                    <>
+                    {isBranchesOpen ? (
+                        <>
+                            <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
+                                <p
+                                    className="col-span-3"
+                                    style={{ fontSize: 14, fontWeight: 400 }}
+                                >
+                                    Branches
+                                </p>
+                                <ChevronDownIcon
+                                    className="h-6 w-6 text-gray-900 col-span-1"
+                                    onClick={toggleBranches}
+                                />
+                            </div>
+                            <Branches />
+                        </>
+                    ) : (
                         <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                             <p
-                                className="col-span-3"
+                                className="col-span-3 font-light"
                                 style={{ fontSize: 14, fontWeight: 400 }}
                             >
                                 Branches
                             </p>
-                            <ChevronUpIcon
+                            <ChevronDownIcon
                                 className="h-6 w-6 text-gray-900 col-span-1"
                                 onClick={toggleBranches}
                             />
                         </div>
-                        <Branches />
-                    </>
-                ) : (
-                    <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
-                        <p
-                            className="col-span-3 font-light"
-                            style={{ fontSize: 14, fontWeight: 400 }}
-                        >
-                            Branches
-                        </p>
-                        <ChevronDownIcon
-                            className="h-6 w-6 text-gray-900 col-span-1"
-                            onClick={toggleBranches}
-                        />
-                    </div>
-                )}
+                    )}
 
-                {isOtherOpen ? (
-                    <>
+                    {isOtherOpen ? (
+                        <>
+                            <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
+                                <p
+                                    className="col-span-3"
+                                    style={{ fontSize: 14, fontWeight: 400 }}
+                                >
+                                    Other
+                                </p>
+                                <ChevronDownIcon
+                                    className="h-6 w-6 text-gray-900 col-span-1"
+                                    onClick={toggleOther}
+                                />
+                            </div>
+                            <Other />
+                        </>
+                    ) : (
                         <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
                             <p
-                                className="col-span-3"
+                                className="col-span-3 font-light"
                                 style={{ fontSize: 14, fontWeight: 400 }}
                             >
                                 Other
                             </p>
-                            <ChevronUpIcon
-                                className="h-3 w-3 text-gray-900 col-span-1"
+                            <ChevronDownIcon
+                                className="h-6 w-6 text-gray-900 col-span-1"
                                 onClick={toggleOther}
                             />
                         </div>
-                        <Other />
-                    </>
-                ) : (
-                    <div className="grid grid-cols-4 justify-center items-center mx-4 my-2">
-                        <p
-                            className="col-span-3 font-light"
-                            style={{ fontSize: 14, fontWeight: 400 }}
-                        >
-                            Other
-                        </p>
-                        <ChevronDownIcon
-                            className="h-3 w-3 text-gray-900 col-span-1"
-                            onClick={toggleOther}
-                        />
-                    </div>
-                )}
+                    )}
+                </div>
             </div>
         </>
     );
