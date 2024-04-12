@@ -84,7 +84,7 @@ function General() {
                             </p>
                             <p
                                 className="col-span-3  truncate"
-                                style={{ fontSize: 10, fontWeight: 500 }}
+                                style={{ fontSize: 12, fontWeight: 500 }}
                             >
                                 {link.name}
                             </p>
@@ -114,7 +114,7 @@ function Companies() {
                             </p>
                             <p
                                 className="col-span-3"
-                                style={{ fontSize: 10, fontWeight: 500 }}
+                                style={{ fontSize: 12, fontWeight: 500 }}
                             >
                                 {link.name}
                             </p>
@@ -145,7 +145,7 @@ function Branches() {
                             </p>
                             <p
                                 className="col-span-3"
-                                style={{ fontSize: 10, fontWeight: 500 }}
+                                style={{ fontSize: 12, fontWeight: 500 }}
                             >
                                 {link.name}
                             </p>
@@ -176,7 +176,7 @@ function Other() {
                             </p>
                             <p
                                 className="col-span-3"
-                                style={{ fontSize: 10, fontWeight: 600 }}
+                                style={{ fontSize: 12, fontWeight: 600 }}
                             >
                                 {link.name}
                             </p>

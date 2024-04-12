@@ -120,10 +120,10 @@ function InfoItem({ title, number, icon }: Info) {
     return (
         <div className="grid grid-cols-4 gap-4">
             <div className="col-span-3">
-                <h2 className="text-sm font-regular" style={{ fontSize: 12 }}>
+                <h2 className="text-sm font-regular" style={{ fontSize: 14 }}>
                     {title}
                 </h2>
-                <p className="text-sm font-bold" style={{ fontSize: 12 }}>
+                <p className="text-sm font-bold" style={{ fontSize: 15 }}>
                     {number}
                 </p>
             </div>
