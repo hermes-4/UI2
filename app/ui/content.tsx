@@ -86,7 +86,7 @@ const Table = () => {
                     className="mt-6 ml-5   border-collapse table-auto"
                     style={{ width: "95%", fontSize: "14" }}
                 >
-                    <tbody className="text-gray-400">
+                    <tbody className="text-gray-600">
                         <tr
                             className=" w-auto "
                             style={{ backgroundColor: "rgb(241, 241, 241" }}
@@ -299,7 +299,7 @@ const TabsOut = () => {
 
 export default function Content() {
     return (
-        <div>
+        <div className="bg-gray-200 w-full h-full">
             <div
                 className="flex flex-row justify-between float-right pl-5 mt-6 h-auto"
                 style={{ width: "80.4%" }}

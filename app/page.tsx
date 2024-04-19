@@ -1,6 +1,3 @@
-import Sidenav from "./ui/side-nav";
-import Top from "./ui/top";
-import Tile from "./ui/tiles";
 import Side from "./ui/side";
 import To from "./ui/to";
 import Content from "./ui/content";

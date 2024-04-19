@@ -27,7 +27,7 @@ const Top: React.FC = () => {
             }}
         >
             <div className="flex flex-row justify-between ">
-                <div className="flex flex-row  h-16 justify-center items-center text-gray-200  ">
+                <div className="flex flex-row  h-14 justify-center items-center text-gray-200  ">
                     <p className="ml-6 mr-2 ">
                         <SearchOutlined />
                     </p>

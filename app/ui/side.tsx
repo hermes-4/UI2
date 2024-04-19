@@ -9,11 +9,14 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import {
     AttachMoneyOutlined,
+    CopyrightOutlined,
     DescriptionOutlined,
+    EmailOutlined,
     ImportContactsTwoTone,
     LocalMallOutlined,
     LocalOfferOutlined,
     NearMeOutlined,
+    PhoneInTalkOutlined,
     ShoppingCartOutlined,
     TrendingUpOutlined,
     ViewInArOutlined,
@@ -442,8 +445,11 @@ export default function Side() {
 
     //when isdropdown is true, render the list
     return (
-        <>
-            <div className="  float-left  bottom-0  bg-gradient from-white from-19.09% via-gray-200  to-gray-700 to-19.09% overflow-x-auto text-gray-500">
+        <div className="">
+            <div
+                className=" float-left    overflow-x-auto text-gray-500"
+                style={{ boxShadow: "1px 0px 4px 0px gray" }}
+            >
                 <div className="w-50">
                     <div
                         className="flex flex-row  h-16 bg-green text-gray-400 justify-between items-center"
@@ -844,7 +850,23 @@ export default function Side() {
                         </div>
                     )}
                 </div>
+                <div className="float-left w-50 bg-gray-100 ">
+                    <div className="flex flex-row mt-4 mb-2">
+                        <p>
+                            <EmailOutlined className="mr-2" />
+                        </p>
+                        <p>info@fntech.com</p>
+                    </div>
+                    <div className="flex flex-row mt-1 mb-2">
+                        <PhoneInTalkOutlined className="h-7 w-4 mr-2" />
+                        <p>(844)367-77---</p>
+                    </div>
+                    <div className="flex flex-row mt-1 mb-4">
+                        <CopyrightOutlined />
+                        <p>2018,FNBTech Inc. v5.10</p>
+                    </div>
+                </div>
             </div>
-        </>
+        </div>
     );
 }
