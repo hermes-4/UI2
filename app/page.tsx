@@ -4,15 +4,15 @@ import Content from "./ui/content";
 
 export default function Home() {
     return (
-        <main className="">
-            <div className=" ">
-                {/* <Sidenav />
+        <main>
+            {/* <div className=" bg-black"> */}
+            {/* <Sidenav />
                 <Top />
                 <Tile /> */}
-                <Side />
-                <To />
-                <Content />
-            </div>
+            <Side />
+            <To />
+            <Content />
+            {/* </div> */}
         </main>
     );
 }
