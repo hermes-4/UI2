@@ -100,7 +100,7 @@ const Table = () => {
                         style={{ backgroundColor: "rgb(241, 241, 241" }}
                     >
                         <th
-                            className="text-gray-800 w-auto py-3 pl-2  flex flex-row mb-3"
+                            className="text-gray-800 w-auto pt-4 pl-2  flex flex-row mb-3"
                             style={{ width: "4%" }}
                         >
                             <p>#</p>
@@ -108,16 +108,18 @@ const Table = () => {
                                 <ArrowsUpDownIcon
                                     className="w-4 h-5"
                                     style={{ fontWeight: 900 }}
-                                />{" "}
+                                />
                             </p>
                         </th>
                         <th
                             className="text-gray-800 py-3"
-                            style={{ width: "5%" }}
+                            style={{ width: "6%" }}
                         >
                             SKU
                         </th>
-                        <th className="text-gray-800 w-auto py-3 ">ITEMS</th>
+                        <th className="text-gray-800 w-auto py-3 pr-72">
+                            ITEMS
+                        </th>
                         <th className="text-gray-800 w-auto py-3 pl-11">
                             QUANTITY
                         </th>
@@ -135,7 +137,7 @@ const Table = () => {
                         >
                             01
                         </td>
-                        <td className=" py-3 px-4" style={{ width: "5%" }}>
+                        <td className=" py-3 px-4" style={{ width: "6%" }}>
                             -
                         </td>
                         <td className="flex flex-row py-3">
@@ -168,7 +170,7 @@ const Table = () => {
                         >
                             02
                         </td>
-                        <td className="py-3 px-4" style={{ width: "5%" }}>
+                        <td className="py-3 px-4" style={{ width: "6%" }}>
                             -
                         </td>
                         <td className="flex flex-row  py-3">
@@ -200,7 +202,7 @@ const Table = () => {
                         >
                             04
                         </td>
-                        <td className="py-3 px-4" style={{ width: "5%" }}>
+                        <td className="py-3 px-4" style={{ width: "6%" }}>
                             -
                         </td>
                         <td className="flex flex-row py-3">
@@ -232,7 +234,7 @@ const Table = () => {
                         >
                             05
                         </td>
-                        <td className="py-3 px-4" style={{ width: "5%" }}>
+                        <td className="py-3 px-4" style={{ width: "6%" }}>
                             -
                         </td>
                         <td className="flex flex-row py-3">
@@ -262,7 +264,7 @@ const Table = () => {
                         >
                             06
                         </td>
-                        <td className="py-3 px-4" style={{ width: "5%" }}>
+                        <td className="py-3 px-4" style={{ width: "6%" }}>
                             -
                         </td>
                         <td className="flex flex-row py-3">
