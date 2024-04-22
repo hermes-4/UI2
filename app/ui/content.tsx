@@ -99,38 +99,59 @@ const Table = () => {
                         className=" w-auto "
                         style={{ backgroundColor: "rgb(241, 241, 241" }}
                     >
-                        <th className="text-gray-800 w-auto py-3 pl-2  flex flex-row mb-3">
+                        <th
+                            className="text-gray-800 w-auto py-3 pl-2  flex flex-row mb-3"
+                            style={{ width: "4%" }}
+                        >
                             <p>#</p>
-                            <ArrowsUpDownIcon
-                                className="w-4 h-5"
-                                style={{ fontWeight: 900 }}
-                            />
+                            <p>
+                                <ArrowsUpDownIcon
+                                    className="w-4 h-5"
+                                    style={{ fontWeight: 900 }}
+                                />{" "}
+                            </p>
                         </th>
-                        <th className="text-gray-800 w-auto py-3">SKU</th>
-                        <th className="text-gray-800 w-auto py-3">ITEMS</th>
-                        <th className="text-gray-800 w-auto py-3">QUANTITY</th>
-                        <th className="text-gray-800 w-auto py-3">PRICE</th>
-                        <th className="text-gray-800 w-auto py-3 float-left">
+                        <th
+                            className="text-gray-800 py-3"
+                            style={{ width: "5%" }}
+                        >
+                            SKU
+                        </th>
+                        <th className="text-gray-800 w-auto py-3 ">ITEMS</th>
+                        <th className="text-gray-800 w-auto py-3 pl-11">
+                            QUANTITY
+                        </th>
+                        <th className="text-gray-800 w-auto py-3 pl-8">
+                            PRICE
+                        </th>
+                        <th className="text-gray-800 w-auto py-3 pr-32">
                             AMOUNT
                         </th>
                     </tr>
                     <tr className="w-auto ">
-                        <td className="w-auto py-3 pl-2">01</td>
-                        <td className=" py-3">-</td>
+                        <td
+                            className="w-auto py-3 pl-2"
+                            style={{ width: "4%" }}
+                        >
+                            01
+                        </td>
+                        <td className=" py-3 px-4" style={{ width: "5%" }}>
+                            -
+                        </td>
                         <td className="flex flex-row py-3">
-                            <p className="text-green-400 w-auto">
+                            <p className="text-green-400 ">
                                 Arthoke Hearted 6x55oz
                             </p>
 
                             <p className="">(Dry/Canned, 900-Dry)</p>
                         </td>
-                        <td className="py-3">3xcase</td>
-                        <td className="py-3">50.00</td>
-                        <td className="py-3 flex flex-row">
+                        <td className="py-3 pl-12">3xcase</td>
+                        <td className="py-3 pl-10 ">$50.00</td>
+                        <td className="pb-3 pt-5 flex flex-row pl-10">
                             <div className="">
                                 <p>250.00</p>
                             </div>
-                            <div className="flex flex-row gap-2 ml-11 pl-11">
+                            <div className="flex flex-row gap-2 ml-11 pl-14">
                                 <p className="text-red-600 bg-red-100 w-8 h-8 pt-2 pl-2 ml-4">
                                     <TrashIcon className="w-4 h-4" />
                                 </p>
@@ -141,21 +162,28 @@ const Table = () => {
                         </td>
                     </tr>
                     <tr className="w-auto bg-gray-100">
-                        <td className="w-auto py-3 pl-2">02</td>
-                        <td className="py-3">-</td>
-                        <td className="flex flex-row w-auto py-3">
+                        <td
+                            className="w-auto py-3 pl-2"
+                            style={{ width: "4%" }}
+                        >
+                            02
+                        </td>
+                        <td className="py-3 px-4" style={{ width: "5%" }}>
+                            -
+                        </td>
+                        <td className="flex flex-row  py-3">
                             <p className="text-green-400 ">
                                 Bacon, Sliced 15x1lb
                             </p>
                             <p className="">(Meat, 100-Meat)</p>
                         </td>
-                        <td className="py-3">2xcase</td>
-                        <td className="py-3">52.00</td>
-                        <td className="py-3 flex flex-row">
+                        <td className="py-3 pl-12">2xcase</td>
+                        <td className="py-3 pl-10">52.00</td>
+                        <td className="py-3 flex flex-row pl-10">
                             <div>
                                 <p>150.0</p>
                             </div>
-                            <div className="flex flex-row gap-2 ml-12 pl-12">
+                            <div className="flex flex-row gap-2 ml-11 pl-16">
                                 <p className="text-red-600 bg-red-100 w-8 h-8 pt-2 pl-2 ml-4">
                                     <TrashIcon className="w-4 h-4" />
                                 </p>
@@ -166,21 +194,28 @@ const Table = () => {
                         </td>
                     </tr>
                     <tr className="w-auto ">
-                        <td className="w-auto py-3 pl-2">04</td>
-                        <td className="py-3">-</td>
-                        <td className="flex flex-row w-auto py-3">
+                        <td
+                            className="w-auto py-3 pl-2"
+                            style={{ width: "4%" }}
+                        >
+                            04
+                        </td>
+                        <td className="py-3 px-4" style={{ width: "5%" }}>
+                            -
+                        </td>
+                        <td className="flex flex-row py-3">
                             <p className="text-green-400">
                                 Bison, Graound 1x1lb
                             </p>
                             <p className="">(Meat, 1000-Meat)</p>
                         </td>
-                        <td className="py-3">2xlb</td>
-                        <td className="py-3">54.04</td>
-                        <td className="py-3 flex flex-row">
+                        <td className="py-3 pl-12">2xlb</td>
+                        <td className="py-3 pl-10">54.04</td>
+                        <td className="py-3 pt-5 flex flex-row pl-10">
                             <div>
                                 <p>108.08</p>
                             </div>
-                            <div className="flex flex-row gap-2 ml-11 pl-11">
+                            <div className="flex flex-row gap-2 ml-11 pl-14">
                                 <p className="text-red-600 bg-red-100 w-8 h-8 pt-2 pl-2 ml-4">
                                     <TrashIcon className="w-4 h-4" />
                                 </p>
@@ -191,19 +226,26 @@ const Table = () => {
                         </td>
                     </tr>
                     <tr className="w-auto bg-gray-100">
-                        <td className="w-auto py-3 pl-2">05</td>
-                        <td className="py-3">-</td>
-                        <td className="flex flex-row w-auto py-3">
+                        <td
+                            className="w-auto py-3 pl-2"
+                            style={{ width: "4%" }}
+                        >
+                            05
+                        </td>
+                        <td className="py-3 px-4" style={{ width: "5%" }}>
+                            -
+                        </td>
+                        <td className="flex flex-row py-3">
                             <p className="text-green-400">
                                 Bacon, SLiced 15x1lb
                             </p>
                             <p className="">(Meat, 100-Meat)</p>
                         </td>
-                        <td className="py-3">2xcase</td>
-                        <td className="py-3">52.00</td>
-                        <td className="py-3 flex flex-row">
+                        <td className="py-3 pl-12">2xcase</td>
+                        <td className="py-3 pl-10">52.00</td>
+                        <td className="py-3 pt-5 flex flex-row pl-11">
                             150.0
-                            <div className="flex flex-row gap-2 ml-12 pl-12">
+                            <div className="flex flex-row gap-2 ml-12 pl-14">
                                 <p className="text-red-600 bg-red-100 w-8 h-8 pt-2 pl-2 ml-4">
                                     <TrashIcon className="w-4 h-4" />
                                 </p>
@@ -214,19 +256,26 @@ const Table = () => {
                         </td>
                     </tr>
                     <tr className="w-auto">
-                        <td className="w-auto py-3 pl-2">06</td>
-                        <td className="py-3">-</td>
-                        <td className="flex flex-row w-auto py-3">
+                        <td
+                            className="w-auto py-3 pl-2"
+                            style={{ width: "4%" }}
+                        >
+                            06
+                        </td>
+                        <td className="py-3 px-4" style={{ width: "5%" }}>
+                            -
+                        </td>
+                        <td className="flex flex-row py-3">
                             <p className="text-green-400">
                                 Bison, Graound 1x1lb
                             </p>
                             <p className="">(Meat, 1000-Meat)</p>
                         </td>
-                        <td className="py-3">2xlb</td>
-                        <td className="py-3">54.04</td>
-                        <td className="py-3 flex flex-row">
+                        <td className="py-3 pl-12">2xlb</td>
+                        <td className="py-3 pl-10">54.04</td>
+                        <td className="py-3 flex flex-row pt-5 pl-10">
                             108.08
-                            <div className="flex flex-row gap-2 ml-11 pl-11">
+                            <div className="flex flex-row gap-2 ml-11 pl-14">
                                 <p className="text-red-600 bg-red-100 w-8 h-8 pt-2 pl-2 ml-4">
                                     <TrashIcon className="w-4 h-4" />
                                 </p>
