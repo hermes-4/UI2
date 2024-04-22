@@ -389,55 +389,55 @@ export default function Side() {
         setIsOIOpen(!isOIOpen);
     };
 
-    const [isCommissaryOpen, setIsCommissaryOpen] = useState(true);
+    const [isCommissaryOpen, setIsCommissaryOpen] = useState(false);
 
     const toggleCommissary = () => {
         setIsCommissaryOpen(!isCommissaryOpen);
     };
 
-    const [isEIOpen, setIsEIOpen] = useState(true);
+    const [isEIOpen, setIsEIOpen] = useState(false);
 
     const toggleEI = () => {
         setIsEIOpen(!isEIOpen);
     };
 
-    const [isInventoryOpen, setIsInventoryOpen] = useState(true);
+    const [isInventoryOpen, setIsInventoryOpen] = useState(false);
 
     const toggleInventory = () => {
         setIsInventoryOpen(!isInventoryOpen);
     };
 
-    const [isRecipesOpen, setIsRecipesOpen] = useState(true);
+    const [isRecipesOpen, setIsRecipesOpen] = useState(false);
 
     const toggleRecipes = () => {
         setIsRecipesOpen(!isRecipesOpen);
     };
 
-    const [isPosOpen, setIsPosOpen] = useState(true);
+    const [isPosOpen, setIsPosOpen] = useState(false);
 
     const togglePos = () => {
         setIsPosOpen(!isPosOpen);
     };
 
-    const [isItemOpen, setIsItemOpen] = useState(true);
+    const [isItemOpen, setIsItemOpen] = useState(false);
 
     const toggleItem = () => {
         setIsItemOpen(!isItemOpen);
     };
 
-    const [isTrackersOpen, setIsTrackersOpen] = useState(true);
+    const [isTrackersOpen, setIsTrackersOpen] = useState(false);
 
     const toggleTrack = () => {
         setIsTrackersOpen(!isTrackersOpen);
     };
 
-    const [isImageOpen, setIsImageOpen] = useState(true);
+    const [isImageOpen, setIsImageOpen] = useState(false);
 
     const toggleIv = () => {
         setIsImageOpen(!isImageOpen);
     };
 
-    const [isReortsOpen, setIsReortsOpen] = useState(true);
+    const [isReortsOpen, setIsReortsOpen] = useState(false);
 
     const toggleReorts = () => {
         setIsReortsOpen(!isReortsOpen);
