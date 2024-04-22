@@ -22,7 +22,7 @@ const US = () => {
     return (
         <>
             <div className="float-left ml-4 mt-3" style={{ width: "88%" }}>
-                <div className="font-bold my-2">
+                <div className="font-bold my-2 text-black">
                     <p>US Foods</p>
                 </div>
 
