@@ -1,5 +1,4 @@
 import {
-    ArrowsUpDownIcon,
     PaperClipIcon,
     PencilSquareIcon,
     TrashIcon,
@@ -30,11 +29,15 @@ const US = () => {
                     <div style={{ width: "29%" }}>
                         <div className="flex flex-row">
                             <p className=" text-gray-400 ">Receive Date:</p>
-                            <p className="font-bold ml-5">03/23.2018</p>
+                            <p className="font-bold ml-5 text-gray-700">
+                                03/23.2018
+                            </p>
                         </div>
                         <div className="flex flex-row">
                             <p className=" text-gray-400">Invoice Date:</p>
-                            <p className="font-bold ml-6">$575.00</p>
+                            <p className="font-bold ml-6 text-gray-700">
+                                $575.00
+                            </p>
                         </div>
                     </div>
                     <div
@@ -44,11 +47,13 @@ const US = () => {
                     <div style={{ width: "35%" }}>
                         <div className="flex flex-row ml-14 mr-7 ">
                             <p className=" text-gray-400 ">Invoice No.:</p>
-                            <p className="font-bold ml-5">185432asd</p>
+                            <p className="font-bold ml-5 text-gray-700">
+                                185432asd
+                            </p>
                         </div>
                         <div className="flex flex-row ml-14 mr-5">
                             <p className=" text-gray-400 ">Order No.:</p>
-                            <p className="font-bold ml-8">354</p>
+                            <p className="font-bold ml-8 text-gray-700">354</p>
                         </div>
                     </div>
                     <div
@@ -58,11 +63,15 @@ const US = () => {
                     <div style={{ width: "29%" }}>
                         <div className="flex flex-row ml-12">
                             <p className=" text-gray-400 ">Due Date:</p>
-                            <p className="font-bold ml-5">03/23/2018</p>
+                            <p className="font-bold ml-5 text-gray-700">
+                                03/23/2018
+                            </p>
                         </div>
                         <div className="flex flex-row ml-12">
                             <p className=" text-gray-400 ">Amount:</p>
-                            <p className="font-bold ml-8">$575.00</p>
+                            <p className="font-bold ml-8 text-gray-700">
+                                $575.00
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -89,13 +98,7 @@ const Table = () => {
                         className=" w-auto "
                         style={{ backgroundColor: "rgb(241, 241, 241" }}
                     >
-                        <th className="text-gray-800 w-auto py-3 pl-2  flex flex-row mb-3">
-                            <p>#</p>
-                            <ArrowsUpDownIcon
-                                className="w-4 h-5"
-                                style={{ fontWeight: 900 }}
-                            />
-                        </th>
+                        <th className="text-gray-800 w-auto py-3">Hi</th>
                         <th className="text-gray-800 w-auto py-3">SKU</th>
                         <th className="text-gray-800 w-auto py-3">ITEMS</th>
                         <th className="text-gray-800 w-auto py-3">QUANTITY</th>
