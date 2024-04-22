@@ -1,4 +1,5 @@
 import {
+    ArrowsUpDownIcon,
     PaperClipIcon,
     PencilSquareIcon,
     TrashIcon,
@@ -88,7 +89,13 @@ const Table = () => {
                         className=" w-auto "
                         style={{ backgroundColor: "rgb(241, 241, 241" }}
                     >
-                        <th className="text-gray-800 w-auto py-3">Hi</th>
+                        <th className="text-gray-800 w-auto py-3 pl-2  flex flex-row mb-3">
+                            <p>#</p>
+                            <ArrowsUpDownIcon
+                                className="w-4 h-5"
+                                style={{ fontWeight: 900 }}
+                            />
+                        </th>
                         <th className="text-gray-800 w-auto py-3">SKU</th>
                         <th className="text-gray-800 w-auto py-3">ITEMS</th>
                         <th className="text-gray-800 w-auto py-3">QUANTITY</th>

@@ -445,7 +445,7 @@ export default function Side() {
 
     return (
         <div
-            className="float-left h-auto  overflow-y-auto text-gray-500 "
+            className="float-left h-auto  overflow-y-auto text-gray-500 drop-shadow-sm shadow"
             style={{ width: "230px" }}
         >
             <div className="h-auto bg-white">
@@ -693,7 +693,7 @@ export default function Side() {
                         >
                             Point of Sale
                         </p>
-                        <KeyboardArrowUpIcon
+                        <KeyboardArrowDownIcon
                             className="h-6 w-6 text-gray-900 col-span-1"
                             onClick={togglePos}
                         />
@@ -720,7 +720,7 @@ export default function Side() {
                         {/* <Item_Vendor /> */}
                     </>
                 ) : (
-                    <div className="grid grid-cols-5 justify-center items-center mx-4 my-2">
+                    <div className="grid grid-cols-5 h-9 justify-center items-center mx-4 my-2">
                         <p className=" col-span-1  mb-1 mt-0">
                             <LocalOfferOutlined className="h-6 w-6" />
                         </p>
@@ -730,7 +730,7 @@ export default function Side() {
                         >
                             Item Vendors
                         </p>
-                        <KeyboardArrowUpIcon
+                        <KeyboardArrowDownIcon
                             className="h-6 w-6 text-gray-900 col-span-1"
                             onClick={toggleItem}
                         />
@@ -851,7 +851,7 @@ export default function Side() {
             <div className="text-gray-500">
                 <div className="flex flex-row mt-4 mb-2">
                     <p>
-                        <EmailOutlined className="mr-2" />
+                        <EmailOutlined className="mr-2 w-4 h-4" />
                     </p>
                     <p>info@fntech.com</p>
                 </div>
@@ -859,8 +859,8 @@ export default function Side() {
                     <PhoneInTalkOutlined className="h-7 w-4 mr-2" />
                     <p>(844)367-77---</p>
                 </div>
-                <div className="flex flex-row mt-1 mb-4">
-                    <CopyrightOutlined />
+                <div className="flex flex-row mt-1 mb-4 ">
+                    <CopyrightOutlined className="pt-1 w-4 h-5" />
                     <p>2018,FNBTech Inc. v5.10</p>
                 </div>
             </div>
