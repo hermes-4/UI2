@@ -5,14 +5,9 @@ import Content from "./ui/content";
 export default function Home() {
     return (
         <main>
-            {/* <div className=" bg-black"> */}
-            {/* <Sidenav />
-                <Top />
-                <Tile /> */}
-            <Side />
+            {/* <Side /> */}
             <To />
             <Content />
-            {/* </div> */}
         </main>
     );
 }
