@@ -5,7 +5,7 @@ import Content from "./ui/content";
 export default function Home() {
     return (
         <main>
-            {/* <Side /> */}
+            <Side />
             <To />
             <Content />
         </main>

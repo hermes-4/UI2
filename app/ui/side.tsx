@@ -454,7 +454,7 @@ export default function Side() {
     return (
         <>
             <div
-                className="float-left h-auto  overflow-y-auto text-gray-500 drop-shadow-sm shadow "
+                className="sm:hidden lg:block  lg:float-left lg:h-auto  lg:overflow-y-auto text-gray-500 lg:drop-shadow-sm shadow "
                 style={{ width: "230px" }}
             >
                 <div className="h-auto bg-white">
