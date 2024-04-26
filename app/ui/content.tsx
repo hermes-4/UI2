@@ -356,28 +356,27 @@ const TabsOut = () => {
 export default function Content() {
     return (
         <>
-            <div className="bg-gray-">
+            <div className="lg:bg-gray-100 hidden sm:hidden md:hidden lg:block">
                 <div
-                    className="flex  flex-row justify-between float-right  mt-6 ml-0 pl-0"
+                    className="flex flex-row justify-between float-right mt-6 ml-0 pl-0 "
                     style={{ width: "80.1%" }}
                 >
-                    <div className="text-gray-800  font-bold">
+                    <div className="text-gray-800 font-bold">
                         <p>Vendor Invoice</p>
                     </div>
-                    <div className="mr-4 grid grid-cols-2 gap-2 w-auto text-gray-600 ">
+                    <div className="mr-4 grid grid-cols-2 gap-2 w-auto text-gray-600">
                         <DownloadOutlined className="bg-white col-span-1" />
                         <PaperClipIcon className="bg-white col-span-1" />
                     </div>
                 </div>
                 <div
-                    className=" float-right mt-4 mr-4 bg-white rounded h-max"
+                    className="float-right mt-4 mr-4 bg-white rounded h-max"
                     style={{ width: "78.4%" }}
                 >
                     <US />
-
                     <div>
                         <hr
-                            className="bg-gray-300 mx-5 "
+                            className="bg-gray-300 mx-5"
                             style={{ width: "95%", height: "2px" }}
                         ></hr>
                     </div>

@@ -12,7 +12,6 @@
 # next.js
 /.next/
 /out/
-/app/ui/cmobb.tsx
 
 # production
 /build
