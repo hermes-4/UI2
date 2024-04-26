@@ -18,10 +18,10 @@ const Top: React.FC = () => {
 
     return (
         <div
-            className=" float-right "
+            className=" lg:float-right "
             style={{
                 width: "81.68%",
-                height: "64px",
+                height: "50px",
                 backgroundImage:
                     "linear-gradient(to right, #2D8B57 93%, #32774D 7%)",
             }}
